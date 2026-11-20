@@ -7,6 +7,7 @@
     "root_environment_variable": "MVTEC_AD2_ROOT",
     "categories": ["rice", "walnuts"],
     "minimum_categories": ["rice"],
+    "category_selection": "Start with rice. Include walnuts only if the November 25 pilot timing fits the compute budget.",
     "preserve_official_splits": true,
     "mirror_revision": "47809f7e8f0ec9991cc03083aeeba82d83cd3abf"
   },
