@@ -7,6 +7,17 @@ EfficientAD detect defects under changed lighting while preserving performance
 under regular lighting. We start with Rice from MVTec AD 2. On November 25,
 Member 2 uses the pilot timing to decide whether to add Walnuts.
 
+## Start with your role
+
+| Your role | Your first task |
+| --- | --- |
+| [Member 1 — data, reference model and slides](docs/team.md#member-1) | Build the Rice loader and show Member 2 that one image yields 80 tiles. |
+| [Member 2 — EfficientAD training and code](docs/team.md#member-2) | Set up stock EfficientAD-S for the Rice pilot while the loader is being built. |
+| [Member 3 — lighting and final report](docs/team.md#member-3) | Write the lighting function and show Member 2 what it does to one tile. |
+| [Member 4 — evaluation and figures](docs/team.md#member-4) | Build the scorer and check it on two example scores while the models are being trained. |
+
+[See the six team deadlines and what must be ready at each one.](docs/team.md#six-team-handoffs)
+
 ## Current status
 
 The group project is confirmed. This repository contains the proposal, planned
@@ -66,10 +77,10 @@ Do not copy the dataset into a tracked directory or commit local `.env` files.
 
 ## Team workflow
 
-Choose an owner for each role in [docs/team.md](docs/team.md). Implement each
-component on a separate branch and review changes through pull requests. Keep
-notebook output concise; record configurations, seeds and final checkpoints
-outside Git, with access instructions alongside reported results.
+Implement each component on a separate branch and review changes through pull
+requests. Keep notebook output concise. Commit the run log and small summaries
+in `results/`. Store checkpoints and full score files outside Git and record
+where teammates can access them.
 
 Every member contributes a short write-up, reviews another member’s work and
 presents their part. Member 1 independently reproduces a Rice score for Member
