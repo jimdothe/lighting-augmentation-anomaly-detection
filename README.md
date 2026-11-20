@@ -4,8 +4,8 @@ DATA 255, Team 1, Fall 2026.
 
 We will study whether additional brightness and contrast augmentation helps
 EfficientAD detect defects under changed lighting while preserving performance
-under regular lighting. The study uses the Rice and Walnuts categories of
-MVTec AD 2.
+under regular lighting. We start with Rice from MVTec AD 2. On November 25,
+Member 2 uses the pilot timing to decide whether to add Walnuts.
 
 ## Current status
 
@@ -27,7 +27,7 @@ model weights and local environment files are excluded from Git.
 | Main comparison | Combined augmentation (S11) versus original EfficientAD (S00) |
 | Ablations | Remove brightness (S01) or contrast (S10) from the combined setting |
 | Seeds | 11, 22 and 33, paired across settings |
-| Primary metric | Image AUROC pooled over shifted lighting within each category, averaged equally across categories |
+| Primary metric | Image AUROC pooled over changed lighting for Rice. If Walnuts is added, report each category and their equal-weight average. |
 
 Preserve official splits. Use normal validation data for calibration and
 thresholds, and freeze choices before final test evaluation. Keep lighting views
@@ -41,7 +41,7 @@ the 1,000-step pilot will determine feasibility.
 
 - `docs/proposal.pdf`: proposal for team review and course submission.
 - `docs/proposal.docx`: editable version of the same proposal.
-- `docs/team.md`: technical responsibilities; owners remain unassigned.
+- [Team plan](docs/team.md) with one owner per task and six dated handoffs.
 - `docs/references.md`: dataset, paper, implementation and pretrained-model sources.
 - `docs/assistance.md`: record of material AI assistance.
 - `configs/study.json`: planned settings; training code does not consume it yet.
@@ -52,7 +52,8 @@ the 1,000-step pilot will determine feasibility.
 
 ## Getting the data
 
-Follow [data/README.md](data/README.md). Copy `.env.example` to `.env` and set
+For the Rice pilot, open **DATA 255 DL Group Project** in Google Drive and download `rice.zip`. The [full Hugging Face download](https://huggingface.co/datasets/yuxinjiang11/AnomVerse/resolve/47809f7e8f0ec9991cc03083aeeba82d83cd3abf/mvtec_ad_2.zip?download=true) also includes Walnuts.
+Follow the [setup instructions](data/README.md). Copy `.env.example` to `.env` and set
 `MVTEC_AD2_ROOT` to the extracted dataset root. To export it in a local shell:
 
 ```sh
@@ -70,10 +71,10 @@ component on a separate branch and review changes through pull requests. Keep
 notebook output concise; record configurations, seeds and final checkpoints
 outside Git, with access instructions alongside reported results.
 
-Every member contributes code, analysis and writing for their assigned area,
-reviews another member's work, and understands the full system. Before final
-submission, a member who did not write the evaluation component must reproduce
-one reported evaluation from the README and saved artifacts.
+Every member contributes a short write-up, reviews another member’s work and
+presents their part. Member 1 independently reproduces a Rice score for Member
+3’s final report. The team package is due internally December 9. Member 2
+confirms the Canvas upload by the official December 16 final report deadline.
 
 ## Data license and attribution
 

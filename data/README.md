@@ -1,18 +1,15 @@
 # Dataset access
 
-Use MVTec AD 2. The study uses Rice and Walnuts, although all eight categories
-were downloaded for the local course workspace.
+Use MVTec AD 2. Start with Rice. Add Walnuts only if the November 25 pilot timing fits the team’s budget.
 
-## Sources
+## Choose one download
 
-1. [Official dataset page](https://www.mvtec.com/research-teaching/datasets/mvtec-ad-2)
-   provides the access form, paper, license and evaluation server information.
-2. [Yuxin Jiang's Anomagic repository](https://github.com/yuxin-jiang/Anomagic)
-   links the mirror in its **Industrial Visual Anomaly Detection Datasets
-   (AnomVerse)** table, in the `mvtec_ad_2` row.
-3. [Mirror snapshot used for this project](https://huggingface.co/datasets/yuxinjiang11/AnomVerse/tree/47809f7e8f0ec9991cc03083aeeba82d83cd3abf).
-4. [Full ZIP from that snapshot](https://huggingface.co/datasets/yuxinjiang11/AnomVerse/resolve/47809f7e8f0ec9991cc03083aeeba82d83cd3abf/mvtec_ad_2.zip?download=true),
-   approximately 38.2 GB compressed.
+| What you need | Where to get it |
+| --- | --- |
+| Rice for the pilot | In Google Drive, open **Shared drives → DATA 255 DL Group Project** with your team account and download `rice.zip` (6.3 GB in Drive). The team’s Word and PDF plan also links directly to this folder. |
+| The full dataset, including Rice and Walnuts | [Download the pinned ZIP from Hugging Face](https://huggingface.co/datasets/yuxinjiang11/AnomVerse/resolve/47809f7e8f0ec9991cc03083aeeba82d83cd3abf/mvtec_ad_2.zip?download=true) (38.2 GB). |
+
+The [MVTec dataset page](https://www.mvtec.com/research-teaching/datasets/mvtec-ad-2) provides the paper, license and evaluation server information. [Anomagic](https://github.com/yuxin-jiang/Anomagic) lists the [Hugging Face mirror](https://huggingface.co/datasets/yuxinjiang11/AnomVerse/tree/47809f7e8f0ec9991cc03083aeeba82d83cd3abf) used for the project.
 
 Keep the original category folders and license/readme. The study excludes
 generated prompts, extra crops, annotated overlays and added mirror metadata.
@@ -20,7 +17,7 @@ Preserve official training, validation and test partitions.
 
 ## Location
 
-Set `MVTEC_AD2_ROOT` in your ignored local `.env` to the extracted directory:
+Unzip your download and set `MVTEC_AD2_ROOT` in your local `.env` to the folder that directly contains `rice/`. For the Hugging Face ZIP, that folder is `mvtec_ad_2/`. The `walnuts/` folder is only needed if the team adds Walnuts.
 
 ```text
 <MVTEC_AD2_ROOT>/
